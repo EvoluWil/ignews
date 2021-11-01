@@ -27,7 +27,7 @@ export const HeaderContent = styled("div")`
       color: var(--gray-300);
 
       transition: {
-        filter: color 0.2s;
+        filter: color 0.4s;
       }
 
       & + a {

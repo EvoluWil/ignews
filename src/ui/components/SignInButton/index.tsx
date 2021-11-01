@@ -8,7 +8,11 @@ export const SignInButton = () => {
   const [session] = useSession();
 
   return session ? (
-    <SignInContainer onClick={() => signOut()}>
+    <SignInContainer
+      onClick={() => {
+        signOut();
+      }}
+    >
       <FaGithub color="#04d361" />
       {session.user?.name}
       <FiX color="#737380" />

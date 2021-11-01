@@ -4,6 +4,7 @@ import { api } from "../../../services/api";
 import { getStripeJs } from "../../../services/stripe-js";
 import { SubscribeContainer } from "./style";
 import { toast } from "react-toastify";
+import { useRouter } from "next/router";
 
 interface SubscribeButtonProps {
   priceId: string;
@@ -11,10 +12,16 @@ interface SubscribeButtonProps {
 
 export const SubscribeButton = ({ priceId }: SubscribeButtonProps) => {
   const [session] = useSession();
+  const route = useRouter();
 
   const handleSubscribe = async () => {
     if (!session) {
       signIn("github");
+      return;
+    }
+
+    if (session.activeSubscription) {
+      route.push("/posts");
       return;
     }
 

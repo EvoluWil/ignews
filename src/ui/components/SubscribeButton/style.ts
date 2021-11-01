@@ -15,7 +15,7 @@ export const SubscribeContainer = styled("button")`
   align-items: center;
   justify-content: center;
 
-  transition: filter 0.2s;
+  transition: filter 0.4s;
 
   &:hover {
     filter: brightness(0.8);

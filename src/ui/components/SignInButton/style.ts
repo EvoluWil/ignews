@@ -11,7 +11,7 @@ export const SignInContainer = styled("button")`
   color: var(--white);
   font-weight: bold;
 
-  transition: filter 0.2s;
+  transition: filter 0.4s;
 
   &:hover {
     filter: brightness(0.8);
